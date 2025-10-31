@@ -13,11 +13,13 @@ module memory(
 reg [31:0] memoria [255:0]; // memoria de 256 palavras de 32 bits
 
 
+
+
 // controla a memoria de dados
 integer i;
 always@(posedge clk or posedge rst) begin
 	if(rst)begin
-		for(i = 0; i < 256; i = i + 1)begin
+		for(i = 0; i < 255; i = i + 1)begin
 			memoria[i] = 0;
 		end
 	end

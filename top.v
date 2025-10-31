@@ -40,10 +40,12 @@ wire write_enable; // habilita escrita na memoria
 wire finaliza_execucao; // finaliza execuçao do programa
 wire enable_reg_write; // habilita escrita nos registradores
 wire [1:0] reg_write_control; // controla entrada de escrita do registrador
+wire jump_enable; // habilita o jump
 
 // fio do extender
 wire [31:0] extend;
 
+assign extend = {{16{inst[15]}}, inst[15:0]};
 
 always@(*)begin
 	case(reg_write_control)
@@ -64,7 +66,7 @@ registradores reg_inst(
 	.reg_out2(reg_out2),
 	.add_reg_write(inst[23:20]),
 	.data_reg_write(data_reg_write),
-	.enable_reg_write(enable_reg_write)
+	.enable_write(enable_reg_write)
 );
 
 memory mem_inst(
@@ -86,7 +88,7 @@ memory mem_inst(
  
 ula ula_inst(
 	.clk(clk),
-	.op(inst[31:24]),
+	.opcode(inst[31:24]),
 	.A(reg_out1),
 	.B(reg_out2),
 	.out(alu_out)
@@ -94,17 +96,22 @@ ula ula_inst(
 
 
 control control_inst(
-	.control_op(inst[31:24]),
-	.finaliza_execucao(finaliza_execucao),
-	.write_enable(write_enable)
+	.rst(rst),
+	.clk(clk),
+	.opcode(inst[31:24]), // entrada que define as flags
+	.write_enable_memory(write_enable), // habilita escrita na memoria
+	.write_enable_reg(enable_reg_write), // habilita escrita no registrador
+	.control_op(reg_write_control), // controla entrada na escrita do reg
+	.finaliza_execucao(finaliza_execucao), // finaliza esxecucao total
+	.jump_enable(jump_enable) // habilita o jump
 );
 
 
 // atualiza contador do pc
 always@(posedge clk or posedge rst) begin
-	if (finaliza_execucao)begin
+	/*if (finaliza_execucao)begin
 		pc = 0;
-	end
+	end*/
 	pc = pc + 4;
 end
 
