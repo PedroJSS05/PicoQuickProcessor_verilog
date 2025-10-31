@@ -8,10 +8,10 @@ module ula(
 );
 always@(posedge clk) begin
 	case(opcode)
-		8'h09 : assign out = A + B;
-		8'h0A : assign out = A - B;
-		8'h0B : assign out = A & B;
-		8'h0C : assign out = A | B;
+		8'h09 : out = A + B;
+		8'h0A : out = A - B;
+		8'h0B : out = A & B;
+		8'h0C : out = A | B;
 		default: out = 0;
 	endcase
 end
