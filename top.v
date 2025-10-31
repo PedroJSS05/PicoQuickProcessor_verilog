@@ -69,6 +69,7 @@ registradores reg_inst(
 	.enable_write(enable_reg_write)
 );
 
+
 memory mem_inst(
 	.clk(clk),
 	.rst(rst),
@@ -81,9 +82,6 @@ memory mem_inst(
 	.write_enable(write_enable)
  );
  
-
-
-
 
  
 ula ula_inst(
