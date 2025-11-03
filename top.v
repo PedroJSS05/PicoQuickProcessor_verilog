@@ -1,3 +1,8 @@
+/*
+top level module, onde todos os modulos são instaciados e é feita as ligações necessárias entre
+eles para o controle do datapath da instrução e controle de algumas lógicas mais básicas
+*/
+
 module top(
 	input clk,
 	input rst
@@ -7,7 +12,7 @@ module top(
 wire [31:0] reg_out1, reg_out2;
 reg [31:0] data_reg_write;
 
-// fetch da instruçao
+// fetch da instruÃ§ao
 wire [31:0] inst;
 reg [31:0] pc;
 
@@ -19,7 +24,7 @@ initial begin
 end
 */
 
-// FORMATO DA INSTRUÇAO
+// FORMATO DA INSTRUÃ‡AO
 
 // inst[31:24] opcode
 // inst[23:20] reg1
@@ -37,7 +42,7 @@ wire [31:0] alu_out;
 
 // fios da control unit
 wire write_enable; // habilita escrita na memoria
-wire finaliza_execucao; // finaliza execuçao do programa
+wire finaliza_execucao; // finaliza execuÃ§ao do programa
 wire enable_reg_write; // habilita escrita nos registradores
 wire [1:0] reg_write_control; // controla entrada de escrita do registrador
 wire jump_enable; // habilita o jump
@@ -75,7 +80,7 @@ memory mem_inst(
 	.rst(rst),
 	.pc(pc), // endereco da instrucao a ser buscada na memoria
 	.inst(inst), // instrucao buscada na memoria
-	.read_data(reg_out2), // endereço de busca na memoria LOAD
+	.read_data(reg_out2), // endereÃ§o de busca na memoria LOAD
 	.data_out(data_load), // dado buscado na memoria
 	.add_write(reg_out1), // endereco a ser escrito na memoria STORE
 	.data_write(reg_out2), // dado a ser escrito na memoria
@@ -112,7 +117,7 @@ always @(posedge clk or posedge rst) begin
     end else if (finaliza_execucao) begin
         pc <= pc; // ou mantenha 0, depende do que quiser
     end else if (jump_enable) begin
-        // Ajuste: defina de onde vem o target. Ex: reg_out1 � byte-address
+        // Ajuste: defina de onde vem o target. Ex: reg_out1 é byte-address
         pc <= pc + 4 + extend;
     end else begin
         pc <= pc + 4;
