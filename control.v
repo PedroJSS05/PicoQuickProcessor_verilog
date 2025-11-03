@@ -1,3 +1,9 @@
+/*
+unidade de controle das flags e dos seletores que serão usados ao longo do datapath do processador
+é basicamente um mux gigante onde para cada intrução vai ter uma saída mapeada para fazer a 
+instrução rodar
+*/
+
 module control(
 	input rst,
 	input clk,
