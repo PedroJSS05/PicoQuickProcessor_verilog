@@ -6,7 +6,7 @@ module ula(
 	output reg [31:0] out
 	
 );
-always@(posedge clk) begin
+always@(*) begin
 	case(opcode)
 		8'h09 : out = A + B;
 		8'h0A : out = A - B;
