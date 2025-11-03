@@ -1,3 +1,7 @@
+/*
+banco de registradores usados nas instruções do processador, são 16 registradores com 32 bits cada
+*/
+
 module registradores(
 	input clk,
 	input rst,
