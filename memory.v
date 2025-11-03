@@ -1,3 +1,9 @@
+/*
+unidade de memoria que é compartilhada entre a memória de instruções e de dados, aqui acontece a
+busca de novas instruções e o salvamento e carregamento de dados que vão ser usados usamos 64 palavras
+de 32 bits cada, resultando em 256 bytes ou 2048 bits
+*/
+
 module memory(
 	input clk,
 	input rst,
@@ -12,7 +18,12 @@ module memory(
 
 reg [31:0] memoria [0:255]; // memoria de 256 palavras de 32 bits
 
-
+/*
+importante citar que dessa forma como está feita a memŕia as intruções precisam ser inciados usando
+instancias no testbench, se quiser rodar em uma fpga ou algo do tipo, precisa usar o readmemh ou
+readmemb para ler um arquivo de memoria, ou usar uma hiperfunction do quartus ou parecido, essa
+última forma é para projetos mais avançados
+*/
 
 
 // controla a memoria de dados
