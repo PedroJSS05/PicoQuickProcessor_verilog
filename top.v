@@ -106,11 +106,17 @@ control control_inst(
 
 
 // atualiza contador do pc
-always@(posedge clk or posedge rst) begin
-	/*if (finaliza_execucao)begin
-		pc = 0;
-	end*/
-	pc = pc + 4;
+always @(posedge clk or posedge rst) begin
+    if (rst) begin
+        pc <= 0;
+    end else if (finaliza_execucao) begin
+        pc <= pc; // ou mantenha 0, depende do que quiser
+    end else if (jump_enable) begin
+        // Ajuste: defina de onde vem o target. Ex: reg_out1 é byte-address
+        pc <= pc + 4 + extend;
+    end else begin
+        pc <= pc + 4;
+    end
 end
 
 endmodule
