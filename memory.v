@@ -16,7 +16,7 @@ module memory(
 	output [31:0] data_out // dado buscado no LOAD
 );
 
-reg [31:0] memoria [0:255]; // memoria de 256 palavras de 32 bits
+	reg [31:0] memoria [0:63]; // memoria de 256 palavras de 32 bits
 
 /*
 importante citar que dessa forma como está feita a memŕia as intruções precisam ser inciados usando
@@ -30,7 +30,7 @@ readmemb para ler um arquivo de memoria, ou usar uma hiperfunction do quartus ou
 integer i;
 always@(posedge clk or posedge rst) begin
 	if(rst)begin
-		for(i = 0; i < 256; i = i + 1)begin
+		for(i = 0; i < 64; i = i + 1)begin
 			memoria[i] = 0;
 		end
 	end
