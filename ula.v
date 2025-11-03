@@ -1,3 +1,9 @@
+/*
+unidade lógica e aritmética, aqui acontece as operações matemáticas e lógicas usadas em algumas
+instruções envolvendo registradores
+*/
+
+
 module ula(
 	input clk,
 	input [7:0] opcode,
