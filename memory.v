@@ -18,6 +18,12 @@ module memory(
 
 	reg [31:0] memoria [0:63]; // memoria de 256 palavras de 32 bits
 
+	initial begin
+		$readmemh("program.mem", memoria);
+	end
+	
+	
+
 /*
 importante citar que dessa forma como está feita a memŕia as intruções precisam ser inciados usando
 instancias no testbench, se quiser rodar em uma fpga ou algo do tipo, precisa usar o readmemh ou
