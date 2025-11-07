@@ -88,7 +88,7 @@ always@(*) begin
 			finaliza_execucao <= 0;
 			jump_enable <= 0;
 		end
-		8'h0F : begin // termina a execucao
+		8'hFF : begin // termina a execucao
 			write_enable_memory = 0;
 			write_enable_reg = 0;
 			control_op = 2'b00;
