@@ -1,0 +1,1061 @@
+$date
+	Fri Nov 07 00:08:58 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$var wire 1 ! clk $end
+$var wire 32 " debug_alu_out [31:0] $end
+$var wire 32 # debug_inst [31:0] $end
+$var wire 32 $ debug_pc [31:0] $end
+$var wire 1 % rst $end
+$var wire 1 & write_enable $end
+$var wire 2 ' reg_write_control [1:0] $end
+$var wire 32 ( reg_out2 [31:0] $end
+$var wire 32 ) reg_out1 [31:0] $end
+$var wire 1 * jump_enable $end
+$var wire 32 + inst [31:0] $end
+$var wire 1 , finaliza_execucao $end
+$var wire 32 - extend [31:0] $end
+$var wire 1 . enable_reg_write $end
+$var wire 32 / data_load [31:0] $end
+$var wire 32 0 alu_out [31:0] $end
+$var reg 32 1 data_reg_write [31:0] $end
+$var reg 32 2 pc [31:0] $end
+$scope module control_inst $end
+$var wire 1 ! clk $end
+$var wire 8 3 opcode [7:0] $end
+$var wire 1 % rst $end
+$var reg 2 4 control_op [1:0] $end
+$var reg 1 , finaliza_execucao $end
+$var reg 1 * jump_enable $end
+$var reg 1 & write_enable_memory $end
+$var reg 1 . write_enable_reg $end
+$upscope $end
+$scope module mem_inst $end
+$var wire 1 ! clk $end
+$var wire 32 5 data_out [31:0] $end
+$var wire 32 6 inst [31:0] $end
+$var wire 32 7 pc [31:0] $end
+$var wire 1 % rst $end
+$var wire 1 & write_enable $end
+$var wire 32 8 read_data [31:0] $end
+$var wire 32 9 data_write [31:0] $end
+$var wire 32 : add_write [31:0] $end
+$var integer 32 ; i [31:0] $end
+$upscope $end
+$scope module reg_inst $end
+$var wire 4 < add_reg1 [3:0] $end
+$var wire 4 = add_reg2 [3:0] $end
+$var wire 4 > add_reg_write [3:0] $end
+$var wire 1 ! clk $end
+$var wire 32 ? data_reg_write [31:0] $end
+$var wire 1 . enable_write $end
+$var wire 32 @ reg_out1 [31:0] $end
+$var wire 32 A reg_out2 [31:0] $end
+$var wire 1 % rst $end
+$var integer 32 B i [31:0] $end
+$upscope $end
+$scope module ula_inst $end
+$var wire 32 C A [31:0] $end
+$var wire 32 D B [31:0] $end
+$var wire 1 ! clk $end
+$var wire 8 E opcode [7:0] $end
+$var reg 32 F out [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 G \memoria[0] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 H \memoria[1] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 I \memoria[2] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 J \memoria[3] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 K \memoria[4] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 L \memoria[5] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 M \memoria[6] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 N \memoria[7] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 O \memoria[8] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 P \memoria[9] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 Q \memoria[10] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 R \memoria[11] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 S \memoria[12] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 T \memoria[13] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 U \memoria[14] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 V \memoria[15] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 W \memoria[16] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 X \memoria[17] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 Y \memoria[18] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 Z \memoria[19] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 [ \memoria[20] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 \ \memoria[21] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 ] \memoria[22] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 ^ \memoria[23] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 _ \memoria[24] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 ` \memoria[25] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 a \memoria[26] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 b \memoria[27] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 c \memoria[28] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 d \memoria[29] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 e \memoria[30] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 f \memoria[31] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 g \memoria[32] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 h \memoria[33] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 i \memoria[34] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 j \memoria[35] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 k \memoria[36] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 l \memoria[37] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 m \memoria[38] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 n \memoria[39] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 o \memoria[40] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 p \memoria[41] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 q \memoria[42] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 r \memoria[43] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 s \memoria[44] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 t \memoria[45] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 u \memoria[46] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 v \memoria[47] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 w \memoria[48] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 x \memoria[49] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 y \memoria[50] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 z \memoria[51] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 { \memoria[52] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 | \memoria[53] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 } \memoria[54] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 ~ \memoria[55] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 !" \memoria[56] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 "" \memoria[57] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 #" \memoria[58] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 $" \memoria[59] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 %" \memoria[60] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 &" \memoria[61] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 '" \memoria[62] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module mem_inst $end
+$var reg 32 (" \memoria[63] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 )" \registrador[0] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 *" \registrador[1] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 +" \registrador[2] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 ," \registrador[3] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 -" \registrador[4] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 ." \registrador[5] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 /" \registrador[6] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 0" \registrador[7] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 1" \registrador[8] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 2" \registrador[9] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 3" \registrador[10] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 4" \registrador[11] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 5" \registrador[12] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 6" \registrador[13] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 7" \registrador[14] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_picoquickprocessor $end
+$scope module dut $end
+$scope module reg_inst $end
+$var reg 32 8" \registrador[15] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 8"
+b0 7"
+b0 6"
+b0 5"
+b0 4"
+b0 3"
+b0 2"
+b0 1"
+b0 0"
+b0 /"
+b0 ."
+b0 -"
+b0 ,"
+b0 +"
+b0 *"
+b0 )"
+b0 ("
+b0 '"
+b0 &"
+b0 %"
+b0 $"
+b0 #"
+b0 ""
+b0 !"
+b0 ~
+b0 }
+b0 |
+b0 {
+b0 z
+b0 y
+b0 x
+b0 w
+b0 v
+b0 u
+b0 t
+b0 s
+b0 r
+b0 q
+b0 p
+b0 o
+b0 n
+b0 m
+b0 l
+b0 k
+b0 j
+b0 i
+b0 h
+b0 g
+b0 f
+b0 e
+b0 d
+b0 c
+b0 b
+b0 a
+b0 `
+b0 _
+b0 ^
+b0 ]
+b0 \
+b0 [
+b0 Z
+b0 Y
+b0 X
+b0 W
+b0 V
+b0 U
+b0 T
+b0 S
+b0 R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 J
+b0 I
+b0 H
+b0 G
+b0 F
+b0 E
+b0 D
+b0 C
+b10000 B
+b0 A
+b0 @
+b0 ?
+b0 >
+b0 =
+b0 <
+b1000000 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b1 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+1.
+b0 -
+0,
+b0 +
+0*
+b0 )
+b0 (
+b1 '
+0&
+1%
+b0 $
+b0 #
+b0 "
+0!
+$end
+#5
+b0 ("
+b0 '"
+b0 &"
+b0 %"
+b0 $"
+b0 #"
+b0 ""
+b0 !"
+b0 ~
+b0 }
+b0 |
+b0 {
+b0 z
+b0 y
+b0 x
+b0 w
+b0 v
+b0 u
+b0 t
+b0 s
+b0 r
+b0 q
+b0 p
+b0 o
+b0 n
+b0 m
+b0 l
+b0 k
+b0 j
+b0 i
+b0 h
+b0 g
+b0 f
+b0 e
+b0 d
+b0 c
+b0 b
+b0 a
+b0 `
+b0 _
+b0 ^
+b0 ]
+b0 \
+b0 [
+b0 Z
+b0 Y
+b0 X
+b0 W
+b0 V
+b0 U
+b0 T
+b0 S
+b0 R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 J
+b0 I
+b0 H
+b0 G
+b1000000 ;
+b0 8"
+b0 7"
+b0 6"
+b0 5"
+b0 4"
+b0 3"
+b0 2"
+b0 1"
+b0 0"
+b0 /"
+b0 ."
+b0 -"
+b0 ,"
+b0 +"
+b0 *"
+b0 )"
+b10000 B
+1!
+#10
+0!
+#15
+b0 8"
+b0 7"
+b0 6"
+b0 5"
+b0 4"
+b0 3"
+b0 2"
+b0 1"
+b0 0"
+b0 /"
+b0 ."
+b0 -"
+b0 ,"
+b0 +"
+b0 *"
+b0 )"
+b10000 B
+b0 ("
+b0 '"
+b0 &"
+b0 %"
+b0 $"
+b0 #"
+b0 ""
+b0 !"
+b0 ~
+b0 }
+b0 |
+b0 {
+b0 z
+b0 y
+b0 x
+b0 w
+b0 v
+b0 u
+b0 t
+b0 s
+b0 r
+b0 q
+b0 p
+b0 o
+b0 n
+b0 m
+b0 l
+b0 k
+b0 j
+b0 i
+b0 h
+b0 g
+b0 f
+b0 e
+b0 d
+b0 c
+b0 b
+b0 a
+b0 `
+b0 _
+b0 ^
+b0 ]
+b0 \
+b0 [
+b0 Z
+b0 Y
+b0 X
+b0 W
+b0 V
+b0 U
+b0 T
+b0 S
+b0 R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 J
+b0 I
+b0 H
+b0 G
+b1000000 ;
+1!
+#20
+b101 1
+b101 ?
+b1 >
+b1 <
+b101 -
+b1111000000000000000000000000 J
+b1001000100100000000000000000 I
+b1000000000000000001010 H
+b100000000000000000101 G
+b100000000000000000101 #
+b100000000000000000101 +
+b100000000000000000101 6
+b100000000000000000101 /
+b100000000000000000101 5
+0!
+0%
+#25
+b1010 1
+b1010 ?
+b10 >
+b10 <
+b1010 -
+b1000000000000000001010 #
+b1000000000000000001010 +
+b1000000000000000001010 6
+b100 $
+b100 2
+b100 7
+b101 *"
+b0 )
+b0 :
+b0 @
+b0 C
+1!
+#30
+0!
+#35
+b0 '
+b0 4
+b1001000100100000000000000000 /
+b1001000100100000000000000000 5
+b1111 "
+b1111 0
+b1111 F
+b1111 1
+b1111 ?
+b1001 3
+b1001 E
+b1 >
+b1010 (
+b1010 8
+b1010 9
+b1010 A
+b1010 D
+b10 =
+b1 <
+b0 -
+b1001000100100000000000000000 #
+b1001000100100000000000000000 +
+b1001000100100000000000000000 6
+b1000 $
+b1000 2
+b1000 7
+b1010 +"
+b101 )
+b101 :
+b101 @
+b101 C
+1!
+#40
+0!
+#45
+1,
+0.
+b100000000000000000101 /
+b100000000000000000101 5
+b1111 3
+b1111 E
+b0 >
+b0 (
+b0 8
+b0 9
+b0 A
+b0 D
+b0 =
+b0 <
+b1111000000000000000000000000 #
+b1111000000000000000000000000 +
+b1111000000000000000000000000 6
+b1100 $
+b1100 2
+b1100 7
+b0 1
+b0 ?
+b0 "
+b0 0
+b0 F
+b1111 *"
+b0 )
+b0 :
+b0 @
+b0 C
+1!
+#50
+0!
+#55
+1!
+#60
+0!
+#65
+1!
+#70
+0!
+#75
+1!
+#80
+0!
+#85
+1!
+#90
+0!
+#95
+1!
+#100
+0!
+#105
+1!
+#110
+0!
+#115
+1!
+#120
+0!

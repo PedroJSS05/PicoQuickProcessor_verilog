@@ -16,6 +16,20 @@ top dut(
     .debug_alu_out(tb_debug_alu_out)
 );
 
+integer i;
+initial begin
+    $dumpfile("top.vcd"); //nome do arquivo de ondas
+    $dumpvars(0, dut); 
+    for (i = 0; i < 64; i = i + 1) begin
+        // isso adiciona memoria[i] ao VCD 
+        $dumpvars(0, dut.mem_inst.memoria[i]);
+    end
+    for (i = 0; i < 16; i = i + 1) begin
+        // isso adiciona registrador[i] ao VCD
+        $dumpvars(0, dut.reg_inst.registrador[i]);
+    end
+end
+
 initial begin
     $display("                                        --- FLASCO COMPANY ---");
     tb_clk = 0; //seta o valor do clock
