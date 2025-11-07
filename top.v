@@ -5,7 +5,10 @@ eles para o controle do datapath da instrução e controle de algumas lógicas m
 
 module top(
 	input clk,
-	input rst
+	input rst,
+	output wire [31:0] debug_pc,
+	output wire [31:0] debug_inst,
+	output wire [31:0] debug_alu_out
 );
 
 // fios do banco de registradores
@@ -123,5 +126,10 @@ always @(posedge clk or posedge rst) begin
         pc <= pc + 4;
     end
 end
+
+// conectando os fios internos às saídas de depuração
+assign debug_pc = pc;
+assign debug_inst = inst;
+assign debug_alu_out = alu_out;
 
 endmodule

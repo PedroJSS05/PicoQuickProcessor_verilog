@@ -18,6 +18,15 @@ module memory(
 
 	reg [31:0] memoria [0:63]; // memoria de 256 palavras de 32 bits
 
+	initial begin
+		@(negedge rst); /*vai esperar o tb_rst ficar em 0 para rodar o comando desse bloco initial que injeta 
+						  os dados do program.mem na memoria, pois quando o tb_ rst fica em alta esse initial
+						  (sem o negedge) percebe e mantem os dados em 00000 ate que o tb_rst seja = 0.*/
+		$readmemh("program.mem", memoria);
+	end
+	
+	
+
 /*
 importante citar que dessa forma como está feita a memŕia as intruções precisam ser inciados usando
 instancias no testbench, se quiser rodar em uma fpga ou algo do tipo, precisa usar o readmemh ou
