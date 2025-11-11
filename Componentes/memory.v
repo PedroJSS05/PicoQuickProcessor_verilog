@@ -22,7 +22,7 @@ module memory(
 		@(negedge rst); /*vai esperar o tb_rst ficar em 0 para rodar o comando desse bloco initial que injeta 
 						  os dados do program.mem na memoria, pois quando o tb_ rst fica em alta esse initial
 						  (sem o negedge) percebe e mantem os dados em 00000 ate que o tb_rst seja = 0.*/
-		$readmemh("program.mem", memoria);
+		$readmemh("Main/program.mem", memoria);
 	end
 	
 	
